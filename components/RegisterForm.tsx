@@ -28,6 +28,8 @@ export default function RegisterForm() {
       city: data.get("city"),
       courseInterestedIn: data.get("courseInterestedIn"),
       message: data.get("message") || "",
+      instagramId: data.get("instagramId") || "",
+      youtubeId: data.get("youtubeId") || "",
     };
     setStatus("loading");
     setMessage("");
@@ -54,15 +56,15 @@ export default function RegisterForm() {
 
   return (
     <section id="register" className="section-padding bg-dark">
-      <div className="container-narrow max-w-3xl">
+      <div className="container-narrow">
         <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-tight text-white text-center mb-2 sm:mb-3">
           Register Now
         </h2>
-        <p className="font-tagline text-sm sm:text-base text-white/70 text-center mb-6 sm:mb-8 italic">
+        <p className="font-tagline text-sm sm:text-base text-white/70 text-center mb-4 sm:mb-6 italic">
           Start your acting journey with us
         </p>
-        <div className="bg-dark-card rounded-2xl p-4 sm:p-6 md:p-8 border border-white/5">
-          <form onSubmit={handleSubmit} className="grid sm:grid-cols-2 gap-6">
+        <div className="bg-dark-card rounded-2xl p-4 sm:p-5 md:p-6 border border-white/5 max-w-xl mx-auto">
+          <form onSubmit={handleSubmit} className="grid sm:grid-cols-2 gap-4 sm:gap-5">
             <div>
               <label htmlFor="fullName" className="block text-sm font-medium text-white/90 mb-2">
                 Full Name *
@@ -72,7 +74,7 @@ export default function RegisterForm() {
                 name="fullName"
                 type="text"
                 required
-                className="w-full px-4 py-3 rounded-lg bg-dark border border-white/10 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent min-h-[44px]"
+                className="w-full px-3 py-2.5 rounded-lg bg-dark border border-white/10 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent min-h-[40px]"
                 placeholder="Your name"
               />
             </div>
@@ -85,7 +87,7 @@ export default function RegisterForm() {
                 name="email"
                 type="email"
                 required
-                className="w-full px-4 py-3 rounded-lg bg-dark border border-white/10 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent min-h-[44px]"
+                className="w-full px-3 py-2.5 rounded-lg bg-dark border border-white/10 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent min-h-[40px]"
                 placeholder="you@example.com"
               />
             </div>
@@ -98,7 +100,7 @@ export default function RegisterForm() {
                 name="phone"
                 type="tel"
                 required
-                className="w-full px-4 py-3 rounded-lg bg-dark border border-white/10 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent min-h-[44px]"
+                className="w-full px-3 py-2.5 rounded-lg bg-dark border border-white/10 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent min-h-[40px]"
                 placeholder="9897017702"
               />
             </div>
@@ -113,7 +115,7 @@ export default function RegisterForm() {
                 required
                 min={5}
                 max={99}
-                className="w-full px-4 py-3 rounded-lg bg-dark border border-white/10 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent min-h-[44px]"
+                className="w-full px-3 py-2.5 rounded-lg bg-dark border border-white/10 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent min-h-[40px]"
                 placeholder="18"
               />
             </div>
@@ -138,15 +140,39 @@ export default function RegisterForm() {
                 id="courseInterestedIn"
                 name="courseInterestedIn"
                 required
-                className="w-full px-4 py-3 rounded-lg bg-dark border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-accent min-h-[44px]"
+                className="w-full px-3 py-2.5 rounded-lg bg-dark border border-white/10 text-white focus:outline-none focus:ring-2 focus:ring-accent min-h-[40px] cursor-pointer"
               >
-                <option value="">Select a course</option>
+                <option value="">Choose your course</option>
                 {COURSE_OPTIONS.map((c) => (
                   <option key={c} value={c}>
                     {c}
                   </option>
                 ))}
               </select>
+            </div>
+            <div>
+              <label htmlFor="instagramId" className="block text-sm font-medium text-white/90 mb-2">
+                Instagram ID (Optional)
+              </label>
+              <input
+                id="instagramId"
+                name="instagramId"
+                type="text"
+                className="w-full px-3 py-2.5 rounded-lg bg-dark border border-white/10 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent min-h-[40px]"
+                placeholder="@username"
+              />
+            </div>
+            <div>
+              <label htmlFor="youtubeId" className="block text-sm font-medium text-white/90 mb-2">
+                YouTube ID / Channel (Optional)
+              </label>
+              <input
+                id="youtubeId"
+                name="youtubeId"
+                type="text"
+                className="w-full px-3 py-2.5 rounded-lg bg-dark border border-white/10 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent min-h-[40px]"
+                placeholder="Channel name or @handle"
+              />
             </div>
             <div className="sm:col-span-2">
               <label htmlFor="message" className="block text-sm font-medium text-white/90 mb-2">
@@ -155,8 +181,8 @@ export default function RegisterForm() {
               <textarea
                 id="message"
                 name="message"
-                rows={3}
-                className="w-full px-4 py-3 rounded-lg bg-dark border border-white/10 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent resize-none"
+                rows={2}
+                className="w-full px-3 py-2.5 rounded-lg bg-dark border border-white/10 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent resize-none"
                 placeholder="Tell us about your goals..."
               />
             </div>
@@ -169,7 +195,7 @@ export default function RegisterForm() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="w-full py-3 rounded-xl bg-accent text-white font-bold hover:bg-accent/90 disabled:opacity-60 transition min-h-[48px]"
+                className="w-full py-2.5 rounded-xl bg-accent text-white font-bold hover:bg-accent/90 disabled:opacity-60 transition min-h-[44px]"
               >
                 {status === "loading" ? "Submitting..." : "Submit Registration"}
               </button>

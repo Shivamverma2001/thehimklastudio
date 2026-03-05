@@ -12,6 +12,8 @@ type Body = {
   city?: string;
   courseInterestedIn?: string;
   message?: string;
+  instagramId?: string;
+  youtubeId?: string;
 };
 
 function validate(body: Body): string | null {
@@ -39,6 +41,8 @@ export async function POST(request: NextRequest) {
       city: String(body.city).trim(),
       courseInterestedIn: String(body.courseInterestedIn).trim(),
       message: body.message ? String(body.message).trim() : "",
+      instagramId: body.instagramId ? String(body.instagramId).trim() : "",
+      youtubeId: body.youtubeId ? String(body.youtubeId).trim() : "",
       submittedAt: new Date(),
     };
 
@@ -78,6 +82,8 @@ export async function POST(request: NextRequest) {
           `Age: ${doc.age}`,
           `City: ${doc.city}`,
           `Course: ${doc.courseInterestedIn}`,
+          doc.instagramId ? `Instagram: ${doc.instagramId}` : "",
+          doc.youtubeId ? `YouTube: ${doc.youtubeId}` : "",
           doc.message ? `Message: ${doc.message}` : "",
         ].filter(Boolean).join("\n"),
         html: [
@@ -88,6 +94,8 @@ export async function POST(request: NextRequest) {
           `<p>Age: ${doc.age}</p>`,
           `<p>City: ${doc.city}</p>`,
           `<p>Course: ${doc.courseInterestedIn}</p>`,
+          doc.instagramId ? `<p>Instagram: ${doc.instagramId}</p>` : "",
+          doc.youtubeId ? `<p>YouTube: ${doc.youtubeId}</p>` : "",
           doc.message ? `<p>Message: ${doc.message}</p>` : "",
         ].join(""),
       });
