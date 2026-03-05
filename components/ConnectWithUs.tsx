@@ -8,10 +8,10 @@ export default function ConnectWithUs() {
   return (
     <section id="connect" className="section-padding bg-dark">
       <div className="container-narrow text-center">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider text-white mb-2 sm:mb-3">
+        <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-tight text-white mb-2 sm:mb-3">
           Connect With Us
         </h2>
-        <p className="text-sm sm:text-base text-white/70 mb-8 sm:mb-10 max-w-xl mx-auto">
+        <p className="font-tagline text-sm sm:text-base text-white/70 mb-8 sm:mb-10 max-w-xl mx-auto italic">
           Follow us on social media for updates and behind-the-scenes
         </p>
         <div className="flex flex-wrap justify-center gap-4 md:gap-6">

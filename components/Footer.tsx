@@ -13,8 +13,8 @@ export default function Footer() {
       <div className="container-narrow section-padding">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
           <div>
-            <h3 className="text-base sm:text-lg font-bold uppercase text-accent mb-1.5 sm:mb-2">
-              The Him Kla Studio
+            <h3 className="font-heading text-base sm:text-lg font-bold uppercase text-accent mb-1.5 sm:mb-2 tracking-tight">
+              The Him कLA Studio
             </h3>
             <p className="text-white/70 text-xs sm:text-sm">
               Yamunanagar&apos;s First Professional Acting Studio
@@ -64,7 +64,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="pt-4 sm:pt-6 border-t border-white/10 text-center text-white/60 text-xs sm:text-sm">
-          ©{new Date().getFullYear()} The Him Kla Studio. All Rights Reserved.
+          ©{new Date().getFullYear()} The Him कLA Studio. All Rights Reserved.
         </div>
       </div>
     </footer>

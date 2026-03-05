@@ -4,7 +4,7 @@ export default function Founder() {
   return (
     <section id="founder" className="section-padding bg-dark">
       <div className="container-narrow">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider text-white text-center mb-8 sm:mb-12">
+        <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-tight text-white text-center mb-8 sm:mb-12">
           Meet the Founder
         </h2>
         <div className="bg-dark-card rounded-2xl p-6 sm:p-8 md:p-10 flex flex-col md:flex-row gap-6 sm:gap-8 items-center max-w-4xl mx-auto">
@@ -22,11 +22,11 @@ export default function Founder() {
             </span>
           </div>
           <div className="text-center md:text-left space-y-3 sm:space-y-4">
-            <h3 className="text-xl sm:text-2xl font-bold uppercase text-accent">Shivam Verma</h3>
-            <p className="text-white/90 text-xs sm:text-sm leading-relaxed">
-              Shivam Verma is an actor, performer, and creative mentor with experience in drama, acting, dance, and digital content creation. With a strong passion for storytelling and performance, he founded The Him Kla Studio to provide professional acting training to aspiring actors in Yamunanagar.
+            <h3 className="font-heading text-xl sm:text-2xl font-bold uppercase text-accent tracking-tight">Shivam Verma</h3>
+            <p className="font-sans text-white/90 text-xs sm:text-sm leading-relaxed">
+              Himanshu Verma is an actor, performer, and creative mentor with experience in drama, acting, dance, and digital content creation. With a strong passion for storytelling and performance, he founded The Him कLA Studio to provide professional acting training to aspiring actors in Yamunanagar.
             </p>
-            <p className="text-white/90 text-xs sm:text-sm italic flex gap-2">
+            <p className="font-tagline text-white/90 text-xs sm:text-sm italic flex gap-2">
               <span className="text-accent text-2xl font-serif">&ldquo;</span>
               His vision is to help students develop real confidence, stage presence, and camera performance skills required for the entertainment industry.
             </p>

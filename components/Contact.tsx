@@ -7,16 +7,16 @@ export default function Contact() {
   return (
     <section id="contact" className="section-padding bg-dark">
       <div className="container-narrow">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider text-white text-center mb-2 sm:mb-3">
+        <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-tight text-white text-center mb-2 sm:mb-3">
           Contact Us
         </h2>
-        <p className="text-sm sm:text-base text-white/70 text-center mb-8 sm:mb-10">
+        <p className="font-tagline text-sm sm:text-base text-white/70 text-center mb-8 sm:mb-10 italic">
           Visit our studio or get in touch
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-dark-card rounded-2xl p-6 md:p-8 border border-white/5">
-            <h3 className="text-lg sm:text-xl font-bold uppercase text-accent mb-4 sm:mb-6">
-              The Him Kla Studio
+            <h3 className="font-heading text-lg sm:text-xl font-bold uppercase text-accent mb-4 sm:mb-6 tracking-tight">
+              The Him कLA Studio
             </h3>
             <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base">
               <li className="flex gap-3 items-start">
@@ -57,7 +57,7 @@ export default function Contact() {
           </div>
           <div className="relative bg-dark-card rounded-2xl overflow-hidden border border-white/5 h-64 md:h-auto min-h-[256px]">
             <iframe
-              title="The Him Kla Studio location"
+              title="The Him कLA Studio location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3482.5876562500003!2d77.255!3d30.129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDA3JzQ0LjQiTiA3N8KwMTUnMTguMCJF!5e0!3m2!1sen!2sin!4v1"
               width="100%"
               height="100%"

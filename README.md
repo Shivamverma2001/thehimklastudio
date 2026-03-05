@@ -1,6 +1,6 @@
-# The Him Kla Studio — Website
+# The Him कLA Studio — Website
 
-Next.js website for The Him Kla Studio (Yamunanagar's first professional acting studio).
+Next.js website for The Him कLA Studio (Yamunanagar's first professional acting studio).
 
 ## Run locally
 

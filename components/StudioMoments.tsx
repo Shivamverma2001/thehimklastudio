@@ -1,22 +1,22 @@
 import Image from "next/image";
 
 const GALLERY_IMAGES = [
-  { src: "https://images.unsplash.com/photo-1514306191717-452ec28c7814?w=600&q=80", alt: "Acting workshop moment", label: "Workshop Moment" },
-  { src: "https://images.unsplash.com/photo-1503095396549-807759245b35?w=600&q=80", alt: "Studio session", label: "Studio Session" },
-  { src: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&q=80", alt: "Workshop moment", label: "Workshop Moment" },
-  { src: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600&q=80", alt: "Stage and curtains", label: "Stage Moment" },
-  { src: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&q=80", alt: "Spotlight on stage", label: "Performance" },
-  { src: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&q=80", alt: "Camera and equipment", label: "Behind the Scenes" },
+  { src: "/images/moment1.avif", alt: "Acting workshop moment", label: "Workshop Moment" },
+  { src: "/images/moment2.avif", alt: "Studio session", label: "Studio Session" },
+  { src: "/images/moment3.avif", alt: "Acting warm-up", label: "Workshop Moment" },
+  { src: "/images/moment4.avif", alt: "Stage and curtains", label: "Stage Moment" },
+  { src: "/images/moment5.avif", alt: "Spotlight on stage", label: "Performance" },
+  { src: "/images/moment6.avif", alt: "Camera and equipment", label: "Behind the Scenes" },
 ];
 
 export default function StudioMoments() {
   return (
     <section id="gallery" className="section-padding bg-dark">
       <div className="container-narrow">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider text-white text-center mb-2 sm:mb-3">
+        <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-tight text-white text-center mb-2 sm:mb-3">
           Studio Moments
         </h2>
-        <p className="text-sm sm:text-base text-white/70 text-center mb-8 sm:mb-12">
+        <p className="font-tagline text-sm sm:text-base text-white/70 text-center mb-8 sm:mb-12 italic">
           Behind the scenes of our acting workshops
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">

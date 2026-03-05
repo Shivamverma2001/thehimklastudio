@@ -1,4 +1,4 @@
-# The Him Kla Studio — Website Build Todo List
+# The Him कLA Studio — Website Build Todo List
 
 Based on the reference screenshots. **Stack: Next.js** (React). Work through in order; you can add more items later.
 
@@ -38,7 +38,7 @@ Based on the reference screenshots. **Stack: Next.js** (React). Work through in 
 - [x] **3.2** Full-width background image (whimsical illustration: creature, butterfly, trees, gradient sky).
 - [x] **3.3** Dark semi-transparent overlay over background for text contrast.
 - [x] **3.4** Typography:
-  - Main title: **THE HIM KLA STUDIO** — large, bold, white, uppercase.
+  - Main title: **The Him कLA Studio** — large, bold, white, uppercase.
   - Subtitle: **Yamunanagar's First Professional Acting Studio** — smaller, bold, golden/orange.
   - Description: one line of body text in white.
 - [x] **3.5** Two CTAs:
@@ -51,7 +51,7 @@ Based on the reference screenshots. **Stack: Next.js** (React). Work through in 
 
 ## 4. About section
 
-- [x] **4.1** Section heading: **ABOUT THE HIM KLA STUDIO** — large, bold, white, uppercase, letter-spacing.
+- [x] **4.1** Section heading: **ABOUT The Him कLA Studio** — large, bold, white, uppercase, letter-spacing.
 - [x] **4.2** Two-column layout (text + image) using Grid or Flexbox; stack on mobile.
 - [x] **4.3** Text column:
   - Paragraph 1: “The Him Kla Studio is the first professional acting studio in Yamunanagar…”
@@ -131,7 +131,7 @@ Based on the reference screenshots. **Stack: Next.js** (React). Work through in 
 - [x] **9.2** Subtitle: “Visit our studio or get in touch”.
 - [x] **9.3** Two-column layout: contact card left, map right; stack on mobile.
 - [x] **9.4** Left card:
-  - Title: **THE HIM KLA STUDIO** — orange/gold, bold, uppercase.
+  - Title: **The Him कLA Studio** — orange/gold, bold, uppercase.
   - Address: “26, Vikas Nagar, Yamunanagar, Haryana” with location icon (orange).
   - Phone: “9897017702” with phone icon (orange).
   - Email: “thehimklastudio@gmail.com” with envelope icon (orange).
@@ -155,7 +155,7 @@ Based on the reference screenshots. **Stack: Next.js** (React). Work through in 
 - [x] **11.1** Section with five solid orange/gold star icons at top center (rating or emphasis).
 - [x] **11.2** Main headline: **START YOUR ACTING JOURNEY TODAY** — large, bold, white, uppercase, centered.
 - [x] **11.3** Subtitle: “Join Yamunanagar's first professional acting studio and transform your passion into profession” — smaller white text, centered.
-- [x] **11.4** CTA button: **Join The Him Kla Studio** — solid orange/gold background, white text, rounded (pill-style); links to Register section or form.
+- [x] **11.4** CTA button: **Join The Him कLA Studio** — solid orange/gold background, white text, rounded (pill-style); links to Register section or form.
 - [x] **11.5** Responsiveness: section stacks and scales on mobile; button remains tappable.
 
 ---
@@ -169,7 +169,7 @@ Based on the reference screenshots. **Stack: Next.js** (React). Work through in 
   - **Column 2 — Quick Links:** Heading “Quick Links” in bold white; links: About, Courses, Gallery, Contact (add Founder & Register if desired); anchor or page links.
   - **Column 3 — Contact Info:** Heading “Contact Info” in bold white; phone icon + “9897017702”, email icon + “thehimklastudio@gmail.com”; below that three social icons (Instagram, Facebook, YouTube) in white.
 - [x] **12.4** Second divider line below the three columns.
-- [x] **12.5** Copyright line: “©2026 The Him Kla Studio. All Rights Reserved.” — small white text, centered.
+- [x] **12.5** Copyright line: “©2026 The Him कLA Studio. All Rights Reserved.” — small white text, centered.
 - [x] **12.6** Responsiveness: columns stack vertically on small screens; spacing and touch targets adjusted.
 
 ---
@@ -204,7 +204,7 @@ Based on the reference screenshots. **Stack: Next.js** (React). Work through in 
 
 - [x] **15.1** Smooth scroll to sections from nav and hero CTAs.
 - [ ] **15.2** Optional: subtle animations (e.g. fade-in on scroll for sections).
-- [x] **15.3** Favicon and basic meta tags (title, description) for The Him Kla Studio.
+- [x] **15.3** Favicon and basic meta tags (title, description) for The Him कLA Studio.
 - [x] **15.4** Accessibility: focus states, contrast, semantic HTML, alt text for images.
 - [x] **15.5** Final pass: test on real devices or responsive mode (mobile and tablet); fix overflow and alignment.
 

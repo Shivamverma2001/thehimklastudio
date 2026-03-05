@@ -70,7 +70,7 @@ export async function POST(request: NextRequest) {
       await transporter.sendMail({
         from: smtpUser,
         to: emailTo,
-        subject: "New registration — The Him Kla Studio",
+        subject: "New registration — The Him कLA Studio",
         text: [
           `Name: ${doc.fullName}`,
           `Email: ${doc.email}`,

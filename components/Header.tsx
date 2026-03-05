@@ -19,8 +19,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-dark/70 backdrop-blur-md border-b border-white/10">
       <div className="container-narrow px-4 sm:px-6 py-3 flex items-center justify-between">
-        <Link href="/" className="text-base sm:text-lg md:text-xl font-bold uppercase tracking-wide text-white hover:text-accent transition">
-          The Him Kla Studio
+        <Link href="/" className="font-heading text-base sm:text-lg md:text-xl font-bold uppercase tracking-tight text-white hover:text-accent transition">
+          The Him कLA Studio
         </Link>
         <nav className="hidden md:flex items-center gap-4 lg:gap-6">
           {NAV_LINKS.map(({ href, label }) => (

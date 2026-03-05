@@ -41,4 +41,10 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+  .font-heading {
+    font-family: var(--font-heading), system-ui, sans-serif;
+  }
+  .font-tagline {
+    font-family: var(--font-serif), Georgia, serif;
+  }
 }

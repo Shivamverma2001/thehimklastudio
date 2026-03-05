@@ -11,17 +11,17 @@ export default function StartYourActing() {
             </svg>
           ))}
         </div>
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider text-white mb-3 sm:mb-4">
+        <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-tight text-white mb-3 sm:mb-4">
           Start Your Acting Journey Today
         </h2>
-        <p className="text-sm sm:text-base text-white/80 mb-6 sm:mb-8 max-w-xl mx-auto">
+        <p className="font-tagline text-sm sm:text-base text-white/80 mb-6 sm:mb-8 max-w-xl mx-auto italic">
           Join Yamunanagar&apos;s first professional acting studio and transform your passion into profession
         </p>
         <Link
           href="#register"
           className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-accent text-white font-bold hover:bg-accent/90 transition min-h-[48px] min-w-[200px]"
         >
-          Join The Him Kla Studio
+          Join The Him कLA Studio
         </Link>
       </div>
     </section>
