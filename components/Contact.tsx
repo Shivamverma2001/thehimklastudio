@@ -7,18 +7,18 @@ export default function Contact() {
   return (
     <section id="contact" className="section-padding bg-dark">
       <div className="container-narrow">
-        <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-wider text-white text-center mb-3">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider text-white text-center mb-2 sm:mb-3">
           Contact Us
         </h2>
-        <p className="text-white/70 text-center mb-10">
+        <p className="text-sm sm:text-base text-white/70 text-center mb-8 sm:mb-10">
           Visit our studio or get in touch
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-dark-card rounded-2xl p-6 md:p-8 border border-white/5">
-            <h3 className="text-xl font-bold uppercase text-accent mb-6">
+            <h3 className="text-lg sm:text-xl font-bold uppercase text-accent mb-4 sm:mb-6">
               The Him Kla Studio
             </h3>
-            <ul className="space-y-4">
+            <ul className="space-y-3 sm:space-y-4 text-sm sm:text-base">
               <li className="flex gap-3 items-start">
                 <span className="text-accent shrink-0 mt-0.5">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

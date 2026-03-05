@@ -8,10 +8,10 @@ export default function ConnectWithUs() {
   return (
     <section id="connect" className="section-padding bg-dark">
       <div className="container-narrow text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-wider text-white mb-3">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider text-white mb-2 sm:mb-3">
           Connect With Us
         </h2>
-        <p className="text-white/70 mb-10 max-w-xl mx-auto">
+        <p className="text-sm sm:text-base text-white/70 mb-8 sm:mb-10 max-w-xl mx-auto">
           Follow us on social media for updates and behind-the-scenes
         </p>
         <div className="flex flex-wrap justify-center gap-4 md:gap-6">
@@ -21,7 +21,7 @@ export default function ConnectWithUs() {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-3 w-32 md:w-36 py-6 rounded-2xl bg-dark-card border border-white/5 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 transition-all min-h-[44px] min-w-[120px]"
+              className="flex flex-col items-center gap-2 sm:gap-3 w-28 sm:w-32 md:w-36 py-4 sm:py-6 rounded-2xl bg-dark-card border border-white/5 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 transition-all min-h-[44px] min-w-[100px] sm:min-w-[120px]"
             >
               {icon === "instagram" && (
                 <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -40,7 +40,7 @@ export default function ConnectWithUs() {
                   <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                 </svg>
               )}
-              <span className="text-white font-medium text-sm">{name}</span>
+              <span className="text-white font-medium text-xs sm:text-sm">{name}</span>
             </a>
           ))}
         </div>

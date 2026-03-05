@@ -17,17 +17,17 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-dark/95 backdrop-blur border-b border-white/10">
-      <div className="container-narrow section-padding flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold uppercase tracking-wide text-white hover:text-accent transition">
+    <header className="sticky top-0 z-50 bg-dark/70 backdrop-blur-md border-b border-white/10">
+      <div className="container-narrow px-4 sm:px-6 py-3 flex items-center justify-between">
+        <Link href="/" className="text-base sm:text-lg md:text-xl font-bold uppercase tracking-wide text-white hover:text-accent transition">
           The Him Kla Studio
         </Link>
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-6">
           {NAV_LINKS.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
-              className="text-sm text-white/90 hover:text-accent transition"
+              className="text-xs sm:text-sm text-white/90 hover:text-accent transition"
             >
               {label}
             </Link>

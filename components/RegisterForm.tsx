@@ -55,13 +55,13 @@ export default function RegisterForm() {
   return (
     <section id="register" className="section-padding bg-dark">
       <div className="container-narrow max-w-3xl">
-        <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-wider text-white text-center mb-3">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider text-white text-center mb-2 sm:mb-3">
           Register Now
         </h2>
-        <p className="text-white/70 text-center mb-8">
+        <p className="text-sm sm:text-base text-white/70 text-center mb-6 sm:mb-8">
           Start your acting journey with us
         </p>
-        <div className="bg-dark-card rounded-2xl p-6 md:p-8 border border-white/5">
+        <div className="bg-dark-card rounded-2xl p-4 sm:p-6 md:p-8 border border-white/5">
           <form onSubmit={handleSubmit} className="grid sm:grid-cols-2 gap-6">
             <div>
               <label htmlFor="fullName" className="block text-sm font-medium text-white/90 mb-2">

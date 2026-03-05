@@ -13,14 +13,14 @@ export default function Hero() {
         }}
       />
       <div className="absolute inset-0 bg-black/60" />
-      <div className="relative z-10 px-4 max-w-3xl mx-auto py-20">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold uppercase tracking-wider text-white mb-4">
+      <div className="relative z-10 px-4 max-w-3xl mx-auto py-16 sm:py-20">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-wider text-white mb-3 sm:mb-4">
           The Him Kla Studio
         </h1>
-        <p className="text-lg sm:text-xl font-semibold text-accent mb-3">
+        <p className="text-base sm:text-lg md:text-xl font-semibold text-accent mb-2 sm:mb-3">
           Yamunanagar&apos;s First Professional Acting Studio
         </p>
-        <p className="text-white/95 text-base sm:text-lg mb-8 max-w-xl mx-auto">
+        <p className="text-white/95 text-sm sm:text-base md:text-lg mb-6 sm:mb-8 max-w-xl mx-auto">
           Learn professional acting skills and prepare for TV shows, web series, films, and theatre with expert acting training.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">

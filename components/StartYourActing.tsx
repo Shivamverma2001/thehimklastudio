@@ -11,10 +11,10 @@ export default function StartYourActing() {
             </svg>
           ))}
         </div>
-        <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-wider text-white mb-4">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider text-white mb-3 sm:mb-4">
           Start Your Acting Journey Today
         </h2>
-        <p className="text-white/80 mb-8 max-w-xl mx-auto">
+        <p className="text-sm sm:text-base text-white/80 mb-6 sm:mb-8 max-w-xl mx-auto">
           Join Yamunanagar&apos;s first professional acting studio and transform your passion into profession
         </p>
         <Link

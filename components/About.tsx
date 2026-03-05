@@ -4,11 +4,11 @@ export default function About() {
   return (
     <section id="about" className="section-padding bg-dark">
       <div className="container-narrow">
-        <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-wider text-white mb-12 text-center md:text-left">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider text-white mb-8 sm:mb-12 text-center md:text-left">
           About The Him Kla Studio
         </h2>
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div className="space-y-4 text-white/90">
+        <div className="grid md:grid-cols-2 gap-8 sm:gap-10 items-center">
+          <div className="space-y-4 text-white/90 text-sm sm:text-base">
             <p>
               The Him Kla Studio is the first professional acting studio in Yamunanagar dedicated to developing talented actors. The studio focuses on practical acting techniques, camera performance, and stage confidence.
             </p>

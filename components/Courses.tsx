@@ -83,25 +83,25 @@ export default function Courses() {
   return (
     <section id="courses" className="section-padding bg-dark">
       <div className="container-narrow">
-        <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-wider text-white text-center mb-3">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-wider text-white text-center mb-2 sm:mb-3">
           Our Courses
         </h2>
-        <p className="text-white/70 text-center mb-12 max-w-2xl mx-auto">
+        <p className="text-sm sm:text-base text-white/70 text-center mb-8 sm:mb-12 max-w-2xl mx-auto">
           Master the art of acting with our comprehensive training programs
         </p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {COURSES.map((course) => (
             <div
               key={course.title}
-              className="bg-dark-card rounded-2xl p-6 border border-white/5 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 transition-all duration-300"
+              className="bg-dark-card rounded-2xl p-4 sm:p-6 border border-white/5 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/10 transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-accent mb-4">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-accent/20 flex items-center justify-center text-accent mb-3 sm:mb-4">
                 <Icon name={course.icon} />
               </div>
-              <h3 className="text-lg font-bold uppercase text-white mb-2">
+              <h3 className="text-base sm:text-lg font-bold uppercase text-white mb-1.5 sm:mb-2">
                 {course.title}
               </h3>
-              <p className="text-white/70 text-sm">{course.description}</p>
+              <p className="text-white/70 text-xs sm:text-sm leading-snug">{course.description}</p>
             </div>
           ))}
         </div>
