@@ -17,9 +17,51 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "The Him कLA Studio | Yamunanagar's First Professional Acting Studio",
+  metadataBase: new URL("https://thehimklastudio.com"),
+  title: {
+    default: "The Him कLA Studio | Yamunanagar Acting Classes",
+    template: "%s | The Him Kla Studio",
+  },
   description:
-    "Learn professional acting skills and prepare for TV shows, web series, films, and theatre with expert acting training in Yamunanagar.",
+    "The Him Kla Studio is Yamunanagar's first professional acting studio, offering practical training for TV, web series, films, and theatre with expert mentors.",
+  keywords: [
+    "acting classes Yamunanagar",
+    "acting studio Yamunanagar",
+    "acting school Haryana",
+    "camera acting course",
+    "kids acting classes",
+    "The Him Kla Studio",
+  ],
+  openGraph: {
+    type: "website",
+    url: "https://thehimklastudio.com",
+    title: "The Him Kla Studio | Yamunanagar's First Professional Acting Studio",
+    description:
+      "Join The Him Kla Studio to learn professional acting, camera confidence, and stage presence from experienced mentors in Yamunanagar.",
+    siteName: "The Him Kla Studio",
+    images: [
+      {
+        url: "/images/about_him_kla.avif",
+        width: 1200,
+        height: 630,
+        alt: "The Him Kla Studio acting class",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Him Kla Studio | Yamunanagar Acting Classes",
+    description:
+      "Professional acting training for TV, web series, films, and theatre in Yamunanagar.",
+    images: ["/images/about_him_kla.avif"],
+  },
+  alternates: {
+    canonical: "https://thehimklastudio.com",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

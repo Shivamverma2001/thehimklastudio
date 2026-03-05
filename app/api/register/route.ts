@@ -71,6 +71,8 @@ export async function POST(request: NextRequest) {
         secure: process.env.SMTP_SECURE === "true",
         auth: { user: smtpUser, pass: smtpPass },
       });
+
+      // Notify founder / studio
       await transporter.sendMail({
         from: smtpUser,
         to: emailTo,
@@ -85,7 +87,9 @@ export async function POST(request: NextRequest) {
           doc.instagramId ? `Instagram: ${doc.instagramId}` : "",
           doc.youtubeId ? `YouTube: ${doc.youtubeId}` : "",
           doc.message ? `Message: ${doc.message}` : "",
-        ].filter(Boolean).join("\n"),
+        ]
+          .filter(Boolean)
+          .join("\n"),
         html: [
           "<p><strong>New registration</strong></p>",
           `<p>Name: ${doc.fullName}</p>`,
@@ -97,6 +101,35 @@ export async function POST(request: NextRequest) {
           doc.instagramId ? `<p>Instagram: ${doc.instagramId}</p>` : "",
           doc.youtubeId ? `<p>YouTube: ${doc.youtubeId}</p>` : "",
           doc.message ? `<p>Message: ${doc.message}</p>` : "",
+        ].join(""),
+      });
+
+      // Thank-you / confirmation email to student
+      await transporter.sendMail({
+        from: `"The Him कLA Studio" <${smtpUser}>`,
+        to: doc.email,
+        subject: "Thank you for registering with The Him कLA Studio",
+        text: [
+          `Hi ${doc.fullName},`,
+          "",
+          "Thank you for registering with The Him कLA Studio.",
+          `We have received your interest in: ${doc.courseInterestedIn}.`,
+          "",
+          "Our team will review your details and contact you soon on your phone or email.",
+          "",
+          "If you have any questions, you can reply directly to this email.",
+          "",
+          "Best regards,",
+          "The Him कLA Studio",
+          "Yamunanagar",
+        ].join("\n"),
+        html: [
+          `<p>Hi ${doc.fullName},</p>`,
+          "<p>Thank you for registering with <strong>The Him कLA Studio</strong>.</p>",
+          `<p>We have received your interest in: <strong>${doc.courseInterestedIn}</strong>.</p>`,
+          "<p>Our team will review your details and contact you soon on your phone or email.</p>",
+          "<p>If you have any questions, you can reply directly to this email.</p>",
+          "<p>Best regards,<br/>The Him कLA Studio<br/>Yamunanagar</p>",
         ].join(""),
       });
     }
