@@ -1,15 +1,15 @@
 # The Him Kla Studio — Website Build Todo List
 
-Based on the reference screenshots. Work through in order; you can add more items later.
+Based on the reference screenshots. **Stack: Next.js** (React). Work through in order; you can add more items later.
 
 **Page order (top to bottom):** Hero → About → Courses → Studio Moments → Founder → Register → Contact → Connect With Us → Start Your Acting → Footer.
 
 ---
 
-## 1. Project setup & global styles
+## 1. Project setup & global styles (Next.js)
 
-- [ ] **1.1** Create project structure (HTML/CSS/JS or framework of choice).
-- [ ] **1.2** Set global styles:
+- [ ] **1.1** Create Next.js project (e.g. `create-next-app` with App Router, TypeScript optional); use `app/` for routes and `app/globals.css` (or CSS modules) for styles.
+- [ ] **1.2** Set global styles in `app/globals.css` and root layout (`app/layout.tsx`):
   - Dark background (`#1A1A1A` or similar).
   - Default text color: white / light gray.
   - Sans-serif font (e.g. system stack or Montserrat / Poppins).
@@ -25,7 +25,7 @@ Based on the reference screenshots. Work through in order; you can add more item
 ## 2. Navigation & header
 
 - [ ] **2.1** Add a sticky/fixed header (if present in final design).
-- [ ] **2.2** Logo + nav links (e.g. Home, About, Courses, Gallery, Founder, Register, Contact).
+- [ ] **2.2** Logo + nav links (e.g. Home, About, Courses, Gallery, Founder, Register, Contact); use Next.js `<Link>` for in-page anchors or client-side navigation.
 - [ ] **2.3** Mobile menu (hamburger + overlay/drawer) if needed.
 
 ---
@@ -90,7 +90,7 @@ Based on the reference screenshots. Work through in order; you can add more item
 - [ ] **6.2** Subtitle: “Behind the scenes of our acting workshops”.
 - [ ] **6.3** Image grid: 2×3 (6 images), rounded corners, consistent aspect ratio.
 - [ ] **6.4** Optional: lightbox/modal on click; optional “Workshop Moment” overlay on one image.
-- [ ] **6.5** Use placeholder images or real photos; ensure lazy-loading and alt text.
+- [ ] **6.5** Use Next.js `<Image>` (or `<img>`) for gallery images; lazy-loading and alt text.
 
 ---
 
@@ -172,17 +172,17 @@ Based on the reference screenshots. Work through in order; you can add more item
 
 ---
 
-## 13. Backend — form submission (MongoDB + email)
+## 13. Backend — form submission (Next.js API + MongoDB + email)
 
-- [ ] **13.1** Set up backend (Node/Express, or serverless API) to receive form submissions (Register form; reuse same pattern if you add a separate Contact form later).
+- [ ] **13.1** Create Next.js API route(s) to handle form submissions: e.g. `app/api/register/route.ts` (App Router) or `pages/api/register.ts` (Pages Router) for the Register form; reuse same pattern if you add a separate Contact form later.
 - [ ] **13.2** MongoDB: create database and collection(s) for registrations (e.g. `registrations` or `leads`).
 - [ ] **13.3** Define schema for form data: fullName, email, phone, age, city, courseInterestedIn, message, submittedAt (and any other fields).
 - [ ] **13.4** On form submit: validate payload, then save document to MongoDB; return success/error to frontend.
 - [ ] **13.5** SMTP: configure SMTP (e.g. Nodemailer with Gmail/SendGrid/similar); store credentials in env vars (e.g. `MONGODB_URI`, `SMTP_HOST`, `SMTP_USER`, `SMTP_PASS`, `EMAIL_TO`); never commit secrets.
 - [ ] **13.6** On successful save to DB: send email to studio (e.g. thehimklastudio@gmail.com) with submitter details (name, email, phone, course, message, etc.) and subject like “New registration — The Him Kla Studio”.
 - [ ] **13.7** Handle errors: log failures, return clear message to user; optionally retry or queue for email.
-- [ ] **13.8** If frontend and API are on different origins: enable CORS on the backend for your frontend URL.
-- [ ] **13.9** Frontend: form POST to your API; show loading state and success/error message after submit.
+- [ ] **13.8** CORS: if frontend and API are on different origins, set CORS headers in the route handler (same-origin is fine when using Next.js API routes on the same app).
+- [ ] **13.9** Frontend: form POST to your Next.js API route (e.g. `/api/register`); show loading state and success/error message after submit.
 
 ---
 
@@ -209,6 +209,8 @@ Based on the reference screenshots. Work through in order; you can add more item
 ---
 
 ## Summary
+
+**Stack:** Next.js (App Router or Pages Router), MongoDB, SMTP (e.g. Nodemailer).
 
 | Section            | Priority | Notes                                      |
 |--------------------|----------|--------------------------------------------|
