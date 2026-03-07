@@ -1,18 +1,72 @@
+"use client";
+
 import Link from "next/link";
+import Image from "next/image";
+import { useState, useEffect, useRef } from "react";
+
+const HERO_IMAGE_DELAY_MS = 4000; // Show image for 4s, then play video
 
 export default function Hero() {
+  const [showVideo, setShowVideo] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // One cycle only: after delay switch from image to video (once per page load)
+  useEffect(() => {
+    const t = setTimeout(() => setShowVideo(true), HERO_IMAGE_DELAY_MS);
+    return () => clearTimeout(t);
+  }, []);
+
+  // When video is shown, play it; when hidden, pause and reset
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (showVideo) video.play().catch(() => {});
+    else {
+      video.pause();
+      video.currentTime = 0;
+    }
+  }, [showVideo]);
+
+  const handleVideoEnded = () => setShowVideo(false);
+
   return (
     <section
       id="hero"
       className="relative min-h-screen flex items-center justify-center text-center overflow-hidden"
     >
+      {/* Hero image — shown first and again after video ends */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url(https://images.unsplash.com/photo-1514306191717-452ec28c7814?w=1920&q=80)",
-        }}
-      />
-      <div className="absolute inset-0 bg-black/60" />
+        className="absolute inset-0 transition-opacity duration-700"
+        style={{ opacity: showVideo ? 0 : 1, zIndex: showVideo ? 0 : 1 }}
+        aria-hidden={showVideo}
+      >
+        <Image
+          src="/images/hero.jpeg"
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+          priority
+        />
+      </div>
+      {/* Hero video — plays after delay, then hides when ended */}
+      <div
+        className="absolute inset-0 transition-opacity duration-700"
+        style={{ opacity: showVideo ? 1 : 0, zIndex: showVideo ? 1 : 0 }}
+        aria-hidden={!showVideo}
+      >
+        <video
+          ref={videoRef}
+          src="/images/hero.MP4"
+          className="absolute inset-0 w-full h-full object-cover"
+          muted
+          playsInline
+          preload="auto"
+          onEnded={handleVideoEnded}
+          style={{ pointerEvents: showVideo ? "auto" : "none" }}
+        />
+      </div>
+      <div className="absolute inset-0 bg-black/60 z-[2]" />
       <div className="relative z-10 px-4 max-w-3xl mx-auto py-16 sm:py-20">
         <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight text-white mb-3 sm:mb-4">
           The Him <span className="text-accent">कLA</span> Studio

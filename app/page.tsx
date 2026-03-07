@@ -1,4 +1,5 @@
 import Script from "next/script";
+import { siteConfig } from "@/lib/site-config";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Courses from "@/components/Courses";
@@ -10,6 +11,8 @@ import ConnectWithUs from "@/components/ConnectWithUs";
 import StartYourActing from "@/components/StartYourActing";
 
 export default function Home() {
+  const { contact, social } = siteConfig;
+  const telephone = contact.phone.startsWith("+") ? contact.phone : `+91-${contact.phone}`;
   return (
     <>
       <Script
@@ -24,18 +27,16 @@ export default function Home() {
               "@id": "https://thehimklastudio.com/#studio",
               name: "The Him Kla Studio",
               url: "https://thehimklastudio.com",
-              description:
-                "The Him Kla Studio is Yamunanagar's first professional acting studio, offering practical training for TV, web series, films, and theatre with expert mentors.",
-              telephone: "+91-9897017702",
-              email: "thehimklastudio@gmail.com",
+              description: `The Him Kla Studio is ${contact.city}'s first professional acting studio, offering practical training for TV, web series, films, and theatre with expert mentors.`,
+              telephone,
+              email: contact.email,
               image: "https://thehimklastudio.com/images/about_him_kla.avif",
               logo: "https://thehimklastudio.com/images/about_him_kla.avif",
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "26, Vikas Nagar",
-                addressLocality: "Yamunanagar",
-                addressRegion: "Haryana",
-                postalCode: "135001",
+                streetAddress: contact.address,
+                addressLocality: contact.city,
+                addressRegion: contact.region,
                 addressCountry: "IN",
               },
               geo: {
@@ -43,14 +44,10 @@ export default function Home() {
                 latitude: 30.129,
                 longitude: 77.255,
               },
-              sameAs: [
-                "https://www.facebook.com/",
-                "https://www.instagram.com/",
-                "https://www.youtube.com/",
-              ],
+              sameAs: [social.facebookUrl, social.instagramUrl, social.youtubeUrl].filter(Boolean),
               areaServed: {
                 "@type": "City",
-                name: "Yamunanagar",
+                name: contact.city,
               },
               makesOffer: [
                 {

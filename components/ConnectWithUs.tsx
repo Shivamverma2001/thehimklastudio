@@ -1,7 +1,9 @@
+import { siteConfig } from "@/lib/site-config";
+
 const SOCIAL = [
-  { name: "Instagram", href: "https://instagram.com", icon: "instagram" },
-  { name: "Facebook", href: "https://facebook.com", icon: "facebook" },
-  { name: "YouTube", href: "https://youtube.com", icon: "youtube" },
+  { name: "Instagram", href: siteConfig.social.instagramUrl, icon: "instagram" as const },
+  { name: "Facebook", href: siteConfig.social.facebookUrl, icon: "facebook" as const },
+  { name: "YouTube", href: siteConfig.social.youtubeUrl, icon: "youtube" as const },
 ];
 
 export default function ConnectWithUs() {

@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { siteConfig } from "@/lib/site-config";
 
 export default function Founder() {
+  const founder = siteConfig.founder;
   return (
     <section id="founder" className="section-padding bg-dark">
       <div className="container-narrow">
@@ -11,10 +13,11 @@ export default function Founder() {
           <div className="relative shrink-0">
             <div className="relative w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden ring-4 ring-accent/80 ring-offset-2 sm:ring-offset-4 ring-offset-dark-card">
               <Image
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
-                alt="Himanshu Verma - Founder"
+                src="/images/founder.jpg"
+                alt={`${founder.name} - Founder, The Him Kla Studio`}
                 fill
                 className="object-cover"
+                sizes="(max-width: 768px) 10rem, 12rem"
               />
             </div>
             <span className="absolute bottom-2 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-accent text-white text-xs font-bold uppercase">
@@ -22,17 +25,17 @@ export default function Founder() {
             </span>
           </div>
           <div className="text-center md:text-left space-y-3 sm:space-y-4 w-full">
-            <h3 className="font-heading text-xl sm:text-2xl font-bold uppercase text-accent tracking-tight">Himanshu Verma</h3>
+            <h3 className="font-heading text-xl sm:text-2xl font-bold uppercase text-accent tracking-tight">{founder.name}</h3>
             <p className="font-sans text-white/90 text-xs sm:text-sm leading-relaxed">
-              Himanshu Verma is an actor, performer, and creative mentor with experience in drama, acting, dance, and digital content creation. With a strong passion for storytelling and performance, he founded The Him कLA Studio to provide professional acting training to aspiring actors in Yamunanagar.
+              {founder.bio}
             </p>
             <p className="font-tagline text-white/90 text-xs sm:text-sm italic flex gap-2">
               <span className="text-accent text-2xl font-serif">&ldquo;</span>
-              His vision is to help students develop real confidence, stage presence, and camera performance skills required for the entertainment industry.
+              {founder.vision}
             </p>
             <div className="flex justify-center md:justify-start gap-3 sm:gap-4 pt-2">
               <a
-                href="https://instagram.com"
+                href={founder.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/80 hover:text-accent transition p-1.5 rounded-full border border-white/10 hover:border-accent/60"
@@ -43,7 +46,7 @@ export default function Founder() {
                 </svg>
               </a>
               <a
-                href="https://facebook.com"
+                href={founder.facebookUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/80 hover:text-accent transition p-1.5 rounded-full border border-white/10 hover:border-accent/60"
@@ -54,7 +57,7 @@ export default function Founder() {
                 </svg>
               </a>
               <a
-                href="https://youtube.com"
+                href={founder.youtubeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/80 hover:text-accent transition p-1.5 rounded-full border border-white/10 hover:border-accent/60"
@@ -65,7 +68,7 @@ export default function Founder() {
                 </svg>
               </a>
               <a
-                href="https://thehimklastudio.com"
+                href={founder.websiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/80 hover:text-accent transition px-3 py-1.5 rounded-full border border-white/10 hover:border-accent/60 text-xs sm:text-sm font-sans"

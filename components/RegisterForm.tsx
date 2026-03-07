@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { siteConfig } from "@/lib/site-config";
 
 const COURSE_OPTIONS = [
   "Professional Acting Training",
@@ -101,7 +102,7 @@ export default function RegisterForm() {
                 type="tel"
                 required
                 className="w-full px-3 py-2.5 rounded-lg bg-dark border border-white/10 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent min-h-[40px]"
-                placeholder="9897017702"
+                placeholder={siteConfig.contact.phone}
               />
             </div>
             <div>
@@ -129,7 +130,7 @@ export default function RegisterForm() {
                 type="text"
                 required
                 className="w-full px-4 py-3 rounded-lg bg-dark border border-white/10 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-accent min-h-[44px]"
-                placeholder="Yamunanagar"
+                placeholder={siteConfig.contact.city}
               />
             </div>
             <div>

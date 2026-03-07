@@ -1,9 +1,12 @@
-const ADDRESS = "26, Vikas Nagar, Yamunanagar, Haryana";
-const PHONE = "9897017702";
-const EMAIL = "thehimklastudio@gmail.com";
-const MAP_LINK = "https://www.google.com/maps/search/?api=1&query=26+Vikas+Nagar+Yamunanagar+Haryana";
+import { siteConfig } from "@/lib/site-config";
 
 export default function Contact() {
+  const { address, phone, email, mapLink, mapEmbedSrc } = siteConfig.contact;
+  // Use custom embed URL if set and valid; otherwise build from address so the iframe doesn't 404
+  const embedSrc =
+    mapEmbedSrc && mapEmbedSrc.startsWith("http")
+      ? mapEmbedSrc
+      : `https://maps.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
   return (
     <section id="contact" className="section-padding bg-dark">
       <div className="container-narrow">
@@ -28,7 +31,7 @@ export default function Contact() {
                 </span>
                 <div>
                   <span className="block text-sm font-medium text-white/70">Address</span>
-                  <span className="text-white">{ADDRESS}</span>
+                  <span className="text-white">{address}</span>
                 </div>
               </li>
               <li className="flex gap-3 items-center">
@@ -39,7 +42,7 @@ export default function Contact() {
                 </span>
                 <div>
                   <span className="block text-sm font-medium text-white/70">Phone</span>
-                  <a href={`tel:${PHONE}`} className="text-white hover:text-accent transition">{PHONE}</a>
+                  <a href={`tel:${phone}`} className="text-white hover:text-accent transition">{phone}</a>
                 </div>
               </li>
               <li className="flex gap-3 items-center">
@@ -50,7 +53,7 @@ export default function Contact() {
                 </span>
                 <div>
                   <span className="block text-sm font-medium text-white/70">Email</span>
-                  <a href={`mailto:${EMAIL}`} className="text-white hover:text-accent transition">{EMAIL}</a>
+                  <a href={`mailto:${email}`} className="text-white hover:text-accent transition">{email}</a>
                 </div>
               </li>
             </ul>
@@ -58,7 +61,7 @@ export default function Contact() {
           <div className="relative bg-dark-card rounded-2xl overflow-hidden border border-white/5 h-64 md:h-auto min-h-[256px]">
             <iframe
               title="The Him कLA Studio location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3482.5876562500003!2d77.255!3d30.129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDA3JzQ0LjQiTiA3N8KwMTUnMTguMCJF!5e0!3m2!1sen!2sin!4v1"
+              src={embedSrc}
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -68,7 +71,7 @@ export default function Contact() {
               className="w-full h-full min-h-[256px] grayscale opacity-90"
             />
             <a
-              href={MAP_LINK}
+              href={mapLink}
               target="_blank"
               rel="noopener noreferrer"
               className="absolute top-2 right-2 md:top-4 md:right-4 px-3 py-2 rounded-lg bg-dark/90 text-white text-sm font-medium hover:bg-accent transition"
